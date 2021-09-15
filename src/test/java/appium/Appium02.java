@@ -26,7 +26,7 @@ public class Appium02 {
         // app acilirken izin istendiginde appActivity ve appPackage tanimlayarak bu sorunu gecebilirsiniz
         // app telefonda acin
         // terminal veya CMD prompt acarak -> adb shell yazin sonra da -> dumpsys window | grep -E "mCurrentFocus" enter
-        // komutunu girince appActivity ve appPackage bilgilerine ulasabilirsniz(cmd de key lerin value lari veriyor)
+        // komutunu girince appActivity ve appPackage bilgilerine ulasabilirsniz(cmd de key lerin value lari veriyor comm dan baslayan kisimlari)
         desiredCapabilities.setCapability("appPackage", "com.touchboarder.android.api.demos");
         desiredCapabilities.setCapability("appActivity", "com.touchboarder.androidapidemos.MainActivity");
         AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),desiredCapabilities); //test passed

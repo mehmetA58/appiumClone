@@ -1,0 +1,66 @@
+package appium;
+
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
+public class Appium09UISelector {
+        @Test
+        public void test() throws MalformedURLException, InterruptedException {
+    DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+
+    desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+    desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+    desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Emulator");
+    desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
+    desiredCapabilities.setCapability(MobileCapabilityType.APP,"C:/Users/asus/IdeaProjects/appiumKURULUM/Apps/gestureTool.apk");
+    desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+    //http://localhost:4723/wd/hub
+    AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+
+    Thread.sleep(4000);
+    //UISelector da ' kullanamiyorsunuz, " kullanmak gerekiyor
+    //orn: driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\")").click();
+
+   //resourcrId ile :
+  //driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\")").click();
+
+    //className() text ile beraber
+   //driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").text(\"Add gesture\")").click();
+
+   //className() index ile beraber
+   //driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").index(1)").click();
+
+   //className()
+    //List<AndroidElement> buttons = driver.findElementsByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\")");
+//
+    //        for (MobileElement button:buttons) {
+    //            if(button.getText().equals("Reload")){
+    //                button.click();
+    //                break;
+    //            }
+    //        }
+
+
+    //        driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").textContains(\"load\")").click();
+
+    //        Thread.sleep(2000);
+
+    //        driver.findElementByAndroidUIAutomator("UiSelector().className(\"android.widget.Button\").textStartsWith(\"Te\")").click();
+
+
+    //UiSelector ile kullanabilecegimiz methodlar
+
+    //System.out.println(driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").checkable(false)").getAttribute("checkable")); //false
+    //System.out.println(driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"com.davemac327.gesture.tool:id/addButton\").clickable(true)").getAttribute("clickable"));  //true
+
+       }
+}
+
