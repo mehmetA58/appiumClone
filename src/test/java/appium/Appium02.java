@@ -18,7 +18,7 @@ public class Appium02 {
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2"); //3.yontem
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
-        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "1fd655780409");
+        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Emulator");
 
         //eger appActivity ve appPackage kullanacaksaniz app path gerekli degildir
         //desiredCapabilities.setCapability(MobileCapabilityType.APP,"C:\\Users\\asus\\IdeaProjects\\appiumKURULUM\\Apps\\apiDemos.apk"); //app in absolute pathini aldik
