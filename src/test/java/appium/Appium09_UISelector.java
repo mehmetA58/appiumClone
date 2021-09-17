@@ -11,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.List;
 
-public class Appium09UISelector {
+public class Appium09_UISelector {
         @Test
         public void test() throws MalformedURLException, InterruptedException {
     DesiredCapabilities desiredCapabilities = new DesiredCapabilities();

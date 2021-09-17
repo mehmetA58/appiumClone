@@ -26,7 +26,7 @@ public class Appium10 {
         desiredCapabilities.setCapability("appActivity", "com.touchboarder.androidapidemos.MainActivity");
         AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),desiredCapabilities);
         Thread.sleep(4000);
-         /*
+         /*soru:
             Lunch API Demos =>Preference =>
             Preference dependencies
             —————————————————

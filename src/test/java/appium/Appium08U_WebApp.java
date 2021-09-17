@@ -9,8 +9,10 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Appium08UIAutomatorViewer {
-
+public class Appium08U_WebApp { //UIAutomatorViewer
+    /*
+     UiAutomatorviewer ornegi
+    */
     @Test
     public void test() throws InterruptedException, MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();

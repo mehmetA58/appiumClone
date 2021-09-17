@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Appium05 {
+public class Appium05_Calculator {
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
@@ -26,7 +26,7 @@ public class Appium05 {
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
 
         Thread.sleep(4000);
-           /*
+           /*soru :
             install app
             do any mathematical operation
             and verify pre result and final result

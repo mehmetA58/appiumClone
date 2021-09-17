@@ -11,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
 
-public class Appium07 {
+public class Appium07_ChromeNativeApp {
     @Test
     public void test() throws MalformedURLException, InterruptedException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -20,26 +20,27 @@ public class Appium07 {
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.0");
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Emulator");
-        //desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
+
+        desiredCapabilities.setCapability("chromedriverExecutable", "C:/Users/asus/IdeaProjects/appiumKURULUM/driver/chromedriver.exe");
 
         desiredCapabilities.setCapability("appPackage", "com.android.chrome");
         desiredCapabilities.setCapability("appActivity", "com.google.android.apps.chrome.Main");
-
-        desiredCapabilities.setCapability("chromedriverExecutable", "C:/Users/asus/IdeaProjects/appiumKURULUM/driver/chromedriver.exe");
         //noReset
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
         AndroidDriver<AndroidElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
 
         Thread.sleep(4000);
 
-        /*
+        /*soru :
         amazon.com git
         sign in tikla
         login page welcome yazisini onayla
          */
         // amazon.com git
         driver.get("https://www.amazon.com/");
+        System.out.println("1 "+driver.getContext());
 
+        //getContextHandles() : mevcut olan app turlerini Set container a ekliyoruz
         Set contextNames = driver.getContextHandles();
         //burda mevcut app tururnu(context) bir bir yazdiriyoruz
         for (Object contextName : contextNames) {
@@ -53,9 +54,11 @@ public class Appium07 {
         }
         //artik set ettigimiz context ile test devam ediyiruz.
         System.out.println("2 "+driver.getContext());//
+        Thread.sleep(2000);
         driver.findElementByXPath("//android.view.View[@content-desc='Sign In ›']").click();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
         Assert.assertTrue(driver.findElementByXPath("//android.view.View[@text='Welcome']").isDisplayed());
+
         System.out.println("3 "+driver.getContext());//
         driver.quit();
 

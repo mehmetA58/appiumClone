@@ -11,7 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Set;
 
-public class Appium06Chrome {
+public class Appium06_ChromeWebApp {
     /*
     https://chromedriver.storage.googleapis.com/index.html  : bu linkten butun chrome versionlarina ulasabiliriz
 
@@ -33,7 +33,7 @@ public class Appium06Chrome {
 
         Thread.sleep(4000);
 
-        /*
+        /*soru :
         amazon.com git
         sign in tikla
         login page welcome yazisini onayla
