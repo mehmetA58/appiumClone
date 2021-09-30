@@ -33,5 +33,10 @@ public class Appium08U_WebApp { //UIAutomatorViewer
         Thread.sleep(4000);
 
         //Java 8 varsa, web inspector yerine uıAutomator uzerinden elementleri locate edebiliriz
+
+
+        driver.findElementByXPath("//android.widget.Button[@text='4']").click();
+        driver.findElementByXPath("//android.widget.Button[@text='4']").click();
+        driver.findElementByXPath("//android.widget.Button[@text='4']").click();
     }
 }

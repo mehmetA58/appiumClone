@@ -55,7 +55,7 @@ public class Appium12 extends AppiumBase {
 
          */
 
-        // Checkbox preference tıklı olduğunu onayla
+        // Checkbox preference tikli olduğunu onayla
         isChecked = driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"android:id/checkbox\").checkable(true)").getAttribute("checked");
         Assert.assertTrue(isChecked.equals("true"));
 
