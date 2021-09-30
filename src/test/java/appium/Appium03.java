@@ -47,7 +47,7 @@ public class Appium03 {
                 close app
 
             */
-                driver.findElementByXPath("//android.widget.Button[@text='Test']").click();
+            driver.findElementByXPath("//android.widget.Button[@text='Test']").click();
             String expetedTitle = "Test a gesture";
             String actualTitle = driver.findElementById("android:id/title").getText();
 
